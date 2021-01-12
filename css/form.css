@@ -1,32 +1,175 @@
+/*--general CSS--*/
+:root{
+    --titlefont:'Pacifico', cursive;
+    --infofont:'Oswald', sans-serif;;
+    
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 0;
-    border: 1px solid red;
 }
+
+fieldset{
+    border: none;
+}
+
+/*--Font CSS--*/
+.logo,
+.welcome-header,
+.form-sect{
+    font-family: var(--titlefont)
+}
+
+.welcome-para,
+.inp-label,
 input{
-    border: 1px solid red;
+    font-family: var(--infofont);
 }
 
+.logo h1{
+    font-size: 2rem;  
+}
+
+.welcome-header{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.welcome-para{
+    line-height: 1.5rem;
+}
+
+.form-sect{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.form-step-num{
+    font-size: 1rem;
+}
+
+.inp-label{
+    font-size: 1.3rem;
+}
+
+*::placeholder{
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+input{
+    font-size: 1rem
+}
+
+
+/*--Header CSS--*/
 header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: #444;
-    min-height: 55px;
-    text-align: center;
-    color: white;
-}
-.logo{
-    max-width: 300px;
-    margin: auto;
-    padding:2px
+    padding: 20px 0;
 }
 
+.logo{
+    text-shadow: 0 5px 3px lightgrey;
+}
+
+/*--Wrapper CSS--*/
 .wrapper{
     display: flex;
     flex-direction: column;
+    width: 90%;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+/*--Welcome Section--*/
+.welcome-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px 0;
+   
+}
+
+.welcome-para{
+    max-width: 250px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+/*--Form CSS--*/
+.form{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
     justify-content: center;
-    align-content: center;
     width: 80%;
-    max-width: 700px;
+}
+
+fieldset{
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+}
+
+.form-sect{
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.form-step-num{
+    border-radius: 50%;
+    background-color: orange;
+    display: inline-block;
+    text-align: center;
+    line-height: 23px;
+    width: 23px;
+    margin-right: 4px;
+    
+}
+
+.inp-group-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inp-label{
+    align-self: flex-start;
+    padding-bottom: 5px;
+    color: orange;
+}
+
+.inp-box{
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid orange;
+    box-shadow: inset  2px -1px 2px orange;
+    transition: box-shadow 5sec ease-in;
+}
+
+
+.inp-box:hover{
+    box-shadow: inset 0 0 10px orange;
+    transition: box-shadow 5sec ease-in;
+}
+
+
+.inp-box:active{
+    border: 1px solid orange;
+
+/*--Footer--*/
+
+
+@media (min-width: 768px){
+    
 }
