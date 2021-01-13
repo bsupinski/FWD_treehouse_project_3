@@ -120,39 +120,41 @@
             </fieldset>
             <fieldset>
                 <legend class="form-sect"><span class="form-step-num" >2</span>Newsletter</legend>
-                <div class="newsletter-sect">
-                     <p>Select the newsletter you would like to receive</p>
-                     <div class="chk-group-flex">
-                        <label class ="inp-label" for="html-news">HTML News</label>
-                        <input class="chk-box" type="checkbox" id="html-news" name="user-html-news">
+                <div class="newsletter-sec-wrap">
+                    <div class="newsletter-sect">
+                        <p>Select the newsletter you would like to receive</p>
+                        <div class="chk-group-flex">
+                            <label class ="inp-label" for="html-news">HTML News</label>
+                            <input class="chk-box" type="checkbox" id="html-news" name="user-html-news">
+                        </div>
+                        <div class="chk-group-flex">
+                            <label class ="inp-label" for="css-news">CSS News</label>
+                            <input class="chk-box" type="checkbox" id="css-news" name="user-css-news">
+                        </div>
+                        <div class="chk-group-flex">
+                            <label class ="inp-label" for="javascript-news">Javascript News</label>
+                            <input class="chk-box" type="checkbox" id="javascript-news" name="user-javascript-news">
+                        </div>
                     </div>
-                    <div class="chk-group-flex">
-                        <label class ="inp-label" for="css-news">CSS News</label>
-                        <input class="chk-box" type="checkbox" id="css-news" name="user-css-news">
+                    <div class="newsletter-sect">
+                        <p>Newsletter format</p>
+                        <div class="chk-group-flex">
+                            <label class ="inp-label" for="html-format">HTML</label>
+                            <input class="chk-box" type="radio" id="html-format" name="user-html">
+                        </div>
+                        <div class="chk-group-flex">
+                            <label class ="inp-label" for="plain-text-format">Plain Text</label>
+                            <input class="chk-box" type="radio" id="plain-text-format" name="user-html">
+                        </div>
                     </div>
-                    <div class="chk-group-flex">
-                        <label class ="inp-label" for="javascript-news">Javascript News</label>
-                        <input class="chk-box" type="checkbox" id="javascript-news" name="user-javascript-news">
+                    <div class="newsletter-sect other-comments">
+                        <label class="inp-label" for="other-comments">Other comments you'd like to hear about</label>
+                        <textarea name="user-comment" id="topic-comments"></textarea>
+                        <div class="btn-sect">
+                            <input class="submit" type="submit" value="Sign Up" >
+                            <input class="reset" type="reset" value="Clear">
+                        </div>
                     </div>
-                </div>
-                <div class="newsletter-sect">
-                    <p>Newsletter format</p>
-                    <div class="chk-group-flex">
-                        <label class ="inp-label" for="html-format">HTML</label>
-                        <input class="chk-box" type="radio" id="html-format" name="user-html">
-                    </div>
-                    <div class="chk-group-flex">
-                        <label class ="inp-label" for="plain-text-format">Plain Text</label>
-                        <input class="chk-box" type="radio" id="plain-text-format" name="user-html">
-                    </div>
-                </div>
-                <div class="newsletter-sect">
-                    <label class="inp-label" for="other-comments">Other comments you'd like to hear about</label>
-                    <textarea name="user-comment" id="topic-comments"></textarea>
-                </div>
-                <div class="btn-sect">
-                    <input type="submit" value="Sign Up" >
-                    <input type="reset" value="Clear">
                 </div>
             </fieldset>
         </form>
