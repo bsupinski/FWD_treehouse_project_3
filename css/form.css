@@ -71,6 +71,7 @@ textarea{
 }
 
 *::placeholder{
+    text-align: right;
     font-size: .8rem;
     font-weight: 400;
     color: var(--maincolor)
