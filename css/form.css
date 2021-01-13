@@ -2,6 +2,8 @@
 :root{
     --titlefont:'Pacifico', cursive;
     --infofont:'Oswald', sans-serif;;
+    --maincolor: rgb(4, 128, 35);
+    --seccolor: rgb(250, 250, 250);
     
 }
 
@@ -9,6 +11,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: none;
+}
+
+body{
+    background-color: var(--seccolor)
 }
 
 fieldset{
@@ -24,7 +31,9 @@ fieldset{
 
 .welcome-para,
 .inp-label,
-input{
+input,
+option,
+p{
     font-family: var(--infofont);
 }
 
@@ -33,6 +42,7 @@ input{
 }
 
 .welcome-header{
+    text-align: center;
     font-weight: 400;
     font-size: 1.7rem;
 }
@@ -53,14 +63,26 @@ input{
 .inp-label{
     font-size: 1.3rem;
 }
+.chk-group-flex > .inp-label{
+    font-size: 1rem;
+}
 
 *::placeholder{
     font-size: .8rem;
-    font-weight: 200;
+    font-weight: 400;
+    color: var(--maincolor)
+}
+p{
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 input{
     font-size: 1rem
+}
+
+option{
+    color: var(--maincolor)
 }
 
 
@@ -71,28 +93,30 @@ header{
     justify-content: center;
     width: 100%;
     padding: 20px 0;
+    background-color: var(--maincolor);
 }
 
 .logo{
-    text-shadow: 0 5px 3px lightgrey;
+    text-shadow: 0 5px 4px black;
+    color: var(--seccolor)
 }
 
 /*--Wrapper CSS--*/
 .wrapper{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     align-items: center;
     height: 100vh;
     margin: auto;
 }
+
 
 /*--Welcome Section--*/
 .welcome-sect{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 20px 0;
    
 }
@@ -107,26 +131,43 @@ header{
 /*--Form CSS--*/
 .form{
     display: flex;
-    flex-direction: row;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 80%;
+    
 }
 
 fieldset{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 450px;
-    margin: auto;
+
+    
 }
 
 .form-sect{
-    text-align: center;
-    padding: 30px 20px;
+    align-self: flex-start;
+    text-align: left;
+    width:300px ;
+    padding: 15px;
+    text-shadow: 0 3px 1px black;
+    color: var(--maincolor);
+}
+
+span{
+    text-shadow: none;
+}
+
+.form-sect span{
+    color: white;
+
 }
 
 .form-step-num{
     border-radius: 50%;
-    background-color: orange;
+    background-color: rgb(4, 128, 35);
     display: inline-block;
     text-align: center;
     line-height: 23px;
@@ -139,36 +180,96 @@ fieldset{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.chk-group-flex{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    height: 30px;
+    margin: auto 0 auto 0;
+}
+
+.chk-box{
+    height: 24px;
 }
 
 .inp-label{
     align-self: flex-start;
     padding-bottom: 5px;
-    color: orange;
+    color: var(--maincolor);
 }
 
-.inp-box{
+.chk-group-flex > .inp-label{
+    padding-left: 7px;
+    padding-bottom: 0;
+}
+
+.inp-box,
+textarea{
     width: 100%;
     max-width: 450px;
     padding: 12px;
     border-radius: 5px;
-    border: 1px solid orange;
-    box-shadow: inset  2px -1px 2px orange;
-    transition: box-shadow 5sec ease-in;
+    border: 1px solid var(--maincolor);
+    box-shadow: inset  2px -1px 2px var(--maincolor);
+}
+textarea{
+    min-height: 100px;
 }
 
+.small-inp-box{
+    max-width: 200px;
+    align-self: flex-start;
+}
 
 .inp-box:hover{
-    box-shadow: inset 0 0 10px orange;
-    transition: box-shadow 5sec ease-in;
+    box-shadow: inset 0 0 10px var(--maincolor);
 }
 
 
+.inp-box:focus{
+    box-shadow: none;
+    border: 4px solid var(--maincolor)nge;
+    
+}
+
+.btn-sect{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.btn-sect input{
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: var(--maincolor);
+    color: var(--seccolor);
+}
+
 .inp-box:active{
-    border: 1px solid orange;
+    outline: 3px solid var(--maincolor);
+}
 
+.newsletter-sect:nth-child(-n+2){
+    padding-bottom: 50px;
+    
+}
+
+p{
+    padding-bottom: 5px;
+    color: var(--maincolor);
+}
+    
 /*--Footer--*/
-
+footer{
+    width: 100%;
+}
 
 @media (min-width: 768px){
     
