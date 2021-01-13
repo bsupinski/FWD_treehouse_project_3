@@ -34,7 +34,8 @@ fieldset{
 input,
 option,
 p,
-footer{
+footer,
+textarea{
     font-family: var(--infofont);
 }
 
@@ -64,6 +65,7 @@ footer{
 .inp-label{
     font-size: 1.3rem;
 }
+
 .chk-group-flex > .inp-label{
     font-size: 1rem;
 }
@@ -79,11 +81,18 @@ p{
 }
 
 input{
-    font-size: 1rem
+    font-size: 1rem;
+    letter-spacing: .05rem;
 }
+
 
 option{
     color: var(--maincolor)
+}
+
+textarea{
+    font-size: 1rem;
+    letter-spacing: .05rem;
 }
 
 
@@ -162,7 +171,7 @@ span{
 }
 
 .form-sect span{
-    color: white;
+    color: var(--bgcolor);
 
 }
 
@@ -185,12 +194,24 @@ span{
     margin-bottom: 25px;
 }
 
+input:focus{
+    background-color: lightyellow;
+}
+
+
+.inp-group-flex:focus-within label{
+    font-size: 1.5rem;
+    text-shadow: 0 3px 7px yellowgreen;
+    transition: .5s;
+        
+}
+
 .chk-group-flex{
     display: flex;
     justify-content: flex-end;
     flex-direction: row-reverse;
-    height: 30px;
-    margin: auto 0 auto 0;
+    align-items: center;
+    height: 24px;
 }
 
 .chk-box{
@@ -218,6 +239,7 @@ textarea{
 }
 textarea{
     min-height: 100px;
+    color: var(--maincolor);
 }
 
 .small-inp-box{
@@ -234,6 +256,40 @@ textarea{
     padding-top: 10px;
 }
 
+input[type="checkbox"]{
+    position: relative;
+    border-radius: 20px;
+    width: 30px;
+    height: 18px;
+    -webkit-appearance: none;
+    background-color: rgb(247, 72, 72);
+}
+
+input:checked[type="checkbox"]{
+    background-color: rgb(108, 236, 108);
+}
+
+input[type="radio"]{
+    height: 15px;
+    width: 15px;
+}
+
+input[type="checkbox"]:before{
+    content:"";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--maincolor);
+    top: 0;
+    left: 0;
+    transition: .5s;
+
+}
+
+input:checked[type="checkbox"]:before{
+    left:15px;
+}
 
 .btn-sect input{
     width: 100px;
@@ -279,7 +335,8 @@ footer{
         align-content: center;
     }
     .inp-group-flex label{
-        min-width: 160px;
+        padding-top: 10px;
+        min-width: 180px;
         height: 50px;
     }
 
@@ -301,5 +358,5 @@ footer{
     }
 
     
-
+    
 }
