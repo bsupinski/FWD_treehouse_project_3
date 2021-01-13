@@ -199,7 +199,6 @@ span{
 
 .inp-label{
     align-self: flex-start;
-    padding-bottom: 5px;
     color: var(--maincolor);
 }
 
@@ -281,13 +280,14 @@ footer{
     }
     .inp-group-flex label{
         min-width: 160px;
+        height: 50px;
     }
 
     .newsletter-sec-wrap{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-content: ;
+        align-items: center;
         flex-wrap: wrap;
         width: 100%;
     
